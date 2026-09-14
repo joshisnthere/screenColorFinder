@@ -11,3 +11,7 @@ from pynput import mouse
 import pyautogui
 
 ctk.set_appearance_mode("dark")
+
+BG = "#0c0c0e"
+PANEL = "#191919"
+ACCENT = "#9ad1ff"
