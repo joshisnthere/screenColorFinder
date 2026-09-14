@@ -9,3 +9,5 @@ color under your cursor, with a running history you can copy from.
 import customtkinter as ctk
 from pynput import mouse
 import pyautogui
+
+ctk.set_appearance_mode("dark")
