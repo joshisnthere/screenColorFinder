@@ -24,3 +24,7 @@ class ColorPickerApp(ctk.CTk):
         self.geometry("420x560")
         self.configure(fg_color=BG)
         self.attributes("-topmost", True)
+
+        self.swatch = ctk.CTkFrame(self, fg_color="#333333", corner_radius=14, height=140)
+        self.swatch.pack(fill="x", padx=20, pady=(20, 10))
+        self.swatch.pack_propagate(False)
