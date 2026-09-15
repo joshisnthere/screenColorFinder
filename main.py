@@ -28,3 +28,7 @@ class ColorPickerApp(ctk.CTk):
         self.swatch = ctk.CTkFrame(self, fg_color="#333333", corner_radius=14, height=140)
         self.swatch.pack(fill="x", padx=20, pady=(20, 10))
         self.swatch.pack_propagate(False)
+
+        self.value_var = ctk.StringVar(value="Pick a color to see its values")
+        ctk.CTkLabel(self.swatch, textvariable=self.value_var, justify="left",
+                     font=ctk.CTkFont(size=14)).pack(expand=True)
