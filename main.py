@@ -32,3 +32,7 @@ class ColorPickerApp(ctk.CTk):
         self.value_var = ctk.StringVar(value="Pick a color to see its values")
         ctk.CTkLabel(self.swatch, textvariable=self.value_var, justify="left",
                      font=ctk.CTkFont(size=14)).pack(expand=True)
+
+        self.pick_btn = ctk.CTkButton(self, text="Pick a color", fg_color="#2a2a30",
+                                       command=self._start_picking)
+        self.pick_btn.pack(pady=10)
