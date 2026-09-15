@@ -36,3 +36,8 @@ class ColorPickerApp(ctk.CTk):
         self.pick_btn = ctk.CTkButton(self, text="Pick a color", fg_color="#2a2a30",
                                        command=self._start_picking)
         self.pick_btn.pack(pady=10)
+
+        ctk.CTkLabel(self, text="History", text_color="#8a8a8a").pack(anchor="w", padx=24, pady=(10, 4))
+        self.history_box = ctk.CTkTextbox(self, fg_color=PANEL, height=260, width=380)
+        self.history_box.pack(padx=20)
+        self.history_box.configure(state="disabled")
