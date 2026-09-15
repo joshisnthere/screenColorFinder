@@ -16,3 +16,11 @@ BG = "#0c0c0e"
 PANEL = "#191919"
 ACCENT = "#9ad1ff"
 
+
+class ColorPickerApp(ctk.CTk):
+    def __init__(self):
+        super().__init__()
+        self.title("Screen Color Picker")
+        self.geometry("420x560")
+        self.configure(fg_color=BG)
+        self.attributes("-topmost", True)
