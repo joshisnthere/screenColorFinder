@@ -43,3 +43,8 @@ class ColorPickerApp(ctk.CTk):
         self.history_box.configure(state="disabled")
 
         self._listener = None
+
+    def _start_picking(self):
+        self.pick_btn.configure(text="Click anywhere on screen...", state="disabled")
+        self._listener = mouse.Listener(on_click=self._on_click)
+        self._listener.start()
