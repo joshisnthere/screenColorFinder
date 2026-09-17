@@ -41,3 +41,5 @@ class ColorPickerApp(ctk.CTk):
         self.history_box = ctk.CTkTextbox(self, fg_color=PANEL, height=260, width=380)
         self.history_box.pack(padx=20)
         self.history_box.configure(state="disabled")
+
+        self._listener = None
