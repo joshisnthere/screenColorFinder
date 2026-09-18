@@ -48,3 +48,9 @@ class ColorPickerApp(ctk.CTk):
         self.pick_btn.configure(text="Click anywhere on screen...", state="disabled")
         self._listener = mouse.Listener(on_click=self._on_click)
         self._listener.start()
+
+    def _on_click(self, x, y, button, pressed):
+        if not pressed:
+            return
+        r, g, b = pyautogui.pixel(int(x), int(y))
+        hex_code = f"#{r:02x}{g:02x}{b:02x}"
