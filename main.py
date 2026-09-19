@@ -54,3 +54,6 @@ class ColorPickerApp(ctk.CTk):
             return
         r, g, b = pyautogui.pixel(int(x), int(y))
         hex_code = f"#{r:02x}{g:02x}{b:02x}"
+
+        self.after(0, self._show_result, hex_code, r, g, b)
+        return False  # stop listener after one click
