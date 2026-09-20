@@ -57,3 +57,7 @@ class ColorPickerApp(ctk.CTk):
 
         self.after(0, self._show_result, hex_code, r, g, b)
         return False  # stop listener after one click
+
+    def _show_result(self, hex_code, r, g, b):
+        self.swatch.configure(fg_color=hex_code)
+        self.value_var.set(f"{hex_code.upper()}\nRGB {r}, {g}, {b}")
