@@ -70,3 +70,8 @@ class ColorPickerApp(ctk.CTk):
         self.pick_btn.configure(text="Pick a color", state="normal")
         self.clipboard_clear()
         self.clipboard_append(hex_code.upper())
+
+
+if __name__ == "__main__":
+    app = ColorPickerApp()
+    app.mainloop()
