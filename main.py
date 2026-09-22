@@ -66,3 +66,7 @@ class ColorPickerApp(ctk.CTk):
         self.history_box.insert("end", f"{hex_code.upper()}   RGB({r}, {g}, {b})\n")
         self.history_box.see("end")
         self.history_box.configure(state="disabled")
+
+        self.pick_btn.configure(text="Pick a color", state="normal")
+        self.clipboard_clear()
+        self.clipboard_append(hex_code.upper())
