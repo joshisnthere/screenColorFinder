@@ -61,3 +61,8 @@ class ColorPickerApp(ctk.CTk):
     def _show_result(self, hex_code, r, g, b):
         self.swatch.configure(fg_color=hex_code)
         self.value_var.set(f"{hex_code.upper()}\nRGB {r}, {g}, {b}")
+
+        self.history_box.configure(state="normal")
+        self.history_box.insert("end", f"{hex_code.upper()}   RGB({r}, {g}, {b})\n")
+        self.history_box.see("end")
+        self.history_box.configure(state="disabled")
